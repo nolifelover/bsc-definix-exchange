@@ -1,0 +1,16 @@
+{
+  "name": "definix-exchange-subgraph",
+  "description": "Definix subgraphs",
+  "version": "1.0.0",
+  "repository": "https://github.com/nolifelover/bsc-definix-exchange.git",
+  "author": "Nolifelover<nolifelover@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen subgraph.yaml",
+    "build": "graph build subgraph.yaml",
+    "create-local": "graph create nolifelover/bsc-definix-exchange --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy nolifelover/bsc-definix-exchange --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020/",
+    "watch-local": "graph deploy nolifelover/bsc-definix-exchange --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001",
+    "deploy": "graph deploy --product hosted-service nolifelover/bsc-definix-exchange"
+  }
+}
